@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/settings">
+        <SwitchPreference
+            android:title="@string/no_picture_mode"
+            android:key="no_picture_mode"
+            android:defaultValue="false"
+            android:summary="@string/no_image_mode_desc" />
+        <SwitchPreference
+            android:title="@string/night_mode"
+            android:key="night_mode"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:title="@string/time_of_saving_articles"
+            android:summary="%s"
+            android:key="time_of_saving_articles"
+            android:entries="@array/time_of_saving_articles"
+            android:entryValues="@array/time_of_saving_articles_item"
+            android:defaultValue="2"/>
+
+        <Preference
+            android:title="@string/clear_image_cache"
+            android:key="clear_glide_cache"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/about">
+        <Preference android:title="@string/version" />
+        <Preference
+            android:title="@string/author"
+            android:key="author"
+            android:summary="https://github.com/hidohuang"/>
+
+        <Preference android:title="@string/feedback"
+                    android:key="feedback"
+                    android:summary="@string/feedback_desc"/>
+
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
